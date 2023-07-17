@@ -1,6 +1,6 @@
 TARGET = main
 
-FLAGS = -std=c++17
+FLAGS = -std=c++17 -g
 
 CFILES = $(wildcard *.c)
 CXXFILES = $(wildcard *.cpp)
