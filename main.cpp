@@ -5,6 +5,8 @@
 using namespace std;
 using ll = long long;
 
+int res[1000][N][N];
+
 int main()
 {
     int mp[N][N];
@@ -18,9 +20,6 @@ int main()
             mp[i][j] = 0;
         }
     }
-    for (int j = 1; j < 5; j++) {
-        mp[1][j] = 1;
-    }
 
     for (int i = 0; i < N; i++) {
         for (int j = 0; j < N; j++) {
@@ -28,6 +27,19 @@ int main()
         }
         cout << endl;
     }
+    cout << getHash(mp) << endl;
     cout << SG(mp) << endl;
+    cout << endl;
+    // int n = SGMove(mp, 1, res);
+    // for (int k = 0; k < n; k++) {
+    //     cout << endl;
+    //     cout << getHash(res[k]) << endl;
+    //     for (int i = 0; i < N; i++) {
+    //         for (int j = 0; j < N; j++) {
+    //             cout << res[k][i][j] << ' ';
+    //         }
+    //         cout << endl;
+    //     }
+    // }
     return 0;
 }
